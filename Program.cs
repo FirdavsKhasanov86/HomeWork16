@@ -12,9 +12,42 @@ namespace HomeWork16
         static void Main(string[] args)
         {
 
-            
+            List<Matrix> list = new List<Matrix>();
+            while (true)
+            {
+                Task.Run(() =>
+                {
+                    for (int i = 0; i < new Random().Next(100, 1000); i++)
+                    {
+                        list.Add(new Matrix()
+                        {
+                            Left = new Random().Next(100),
+                            simbol = Word(),
+                            Top = new Random().Next(2, 8)
+                        });
+                    }
+                });
+                
+                
+            }
+
+
         }
         
+        static char[] Word()
+        {
+
+            string word = "";
+            for (char i = 'A'; i <= 'Z'; i++)
+            {
+                if ((char)new Random().Next(0, 4) == 1)
+                {
+                    word += i;
+                }
+            }
+            return word.ToCharArray();
+        }
+
 
     }
 
