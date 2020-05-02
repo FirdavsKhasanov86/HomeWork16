@@ -12,11 +12,20 @@ namespace HomeWork16
         static void Main(string[] args)
         {
 
-
+            
         }
         
 
     }
+
+
+    class Matrix
+    {
+        public char[] simbol { get; set; }
+        public int Left { get; set; }
+        public int Top { get; set; }
+    }
+
 
 }
 
